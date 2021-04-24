@@ -39,8 +39,7 @@ def prepare_file(file,chromosome,pval,position):
 
 def manhattanplot(snpinfile):
     
-    
-    fig=plt.figure()
+    fig = plt.figure()
     ax = fig.add_subplot(111)
     ax_label = []
     ax_pos = []
