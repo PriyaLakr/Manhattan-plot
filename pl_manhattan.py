@@ -11,10 +11,10 @@ def open_infile(infile):
     
     if infile.endswith(".csv"):
     	file_name=pd.read_csv(infile,sep=',')
-    elif infile.endswith(".tsv"):
+    elif infile.endswith(".tsv") or infile.endswith(".txt"):
         file_name=pd.read_csv(infile,sep='\t')
     else:
-        file_name=pd.read_csv(infile,sep='\t')
+        print("Upload a properly formatted file!")
             
     return file_name
 
