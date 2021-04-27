@@ -88,11 +88,11 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description = "Script for designing a manhattan plot")   
 
 	# parse the arguments
-    parser.add_argument("--path", type=str, help="Path of the directory where SNP csv files are stored")
-    parser.add_argument("--in_file", type=str, help="Name of the csv and/or tsv file containing SNPs/GWAS data to be analysed")
-    parser.add_argument("--chromosome",  type=str, help="How chromosomes are indicated in csv file")
-    parser.add_argument("--pval",  type=str, help="How p-values are indicated in csv file")
-    parser.add_argument("--position", type=str, help="How chromosomal positions are indicated in csv file")
+    parser.add_argument("--path", type=str, help="Path of the directory where your SNP/GWAS files are stored")
+    parser.add_argument("--in_file", type=str, help="Name of the file containing SNPs/GWAS data to be analysed")
+    parser.add_argument("--chromosome",  type=str, help="How chromosomes are indicated in your input file")
+    parser.add_argument("--pval",  type=str, help="How p-values are indicated in your input file")
+    parser.add_argument("--position", type=str, help="How chromosomal positions are indicated in your input file")
     parser.add_argument("--have_X", type=str, help="Does your data contain X chromosome? If yes, Write 'y' ")
     parser.add_argument("--col", type=str, help="Do you want a colored graph? If yes, Write 'y' ")
 
