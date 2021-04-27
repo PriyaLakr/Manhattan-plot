@@ -93,8 +93,8 @@ if __name__ == "__main__":
     parser.add_argument("--chromosome",  type=str, help="How chromosomes are indicated in csv file")
     parser.add_argument("--pval",  type=str, help="How p-values are indicated in csv file")
     parser.add_argument("--position", type=str, help="How chromosomal positions are indicated in csv file")
-    parser.add_argument("--have_X", type=str, help="Does your data contain X chromosome? Write 'y' ")
-    parser.add_argument("--col", type=str, help="Do you want a colored graph? Write 'y' ")
+    parser.add_argument("--have_X", type=str, help="Does your data contain X chromosome? If yes, Write 'y' ")
+    parser.add_argument("--col", type=str, help="Do you want a colored graph? If yes, Write 'y' ")
 
     args = parser.parse_args()
     path = args.path
