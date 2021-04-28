@@ -118,8 +118,8 @@ if __name__ == "__main__":
         os.chdir(new_path)
         #chromosome="new_chr"
         
-        proc_snpinfile=prepare_file(proc_file,"new_chr", pval,position) 
-        manhattanplot(proc_snpinfile,"new_chr",col) 
+        proc_snpinfile=prepare_file(proc_file,pval,position,chromosome="new_chr") 
+        manhattanplot(proc_snpinfile,col,chromosome="new_chr") 
 
     else:
     # making a result folder to store results
