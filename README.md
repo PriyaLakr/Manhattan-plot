@@ -9,9 +9,15 @@ Output -> A manhattan plot in .png format with colored and black-white format
 
 What is a manhattan plot? 🤔 https://en.wikipedia.org/wiki/Manhattan_plot 
 
-USAGE help: 
+USAGE: 
 
-    python pl_manhattan.py --help
+    $ python pl_manhattan.py [options]
+    usage: pl_manhattan.py [—-help] [--path path_to_input files] [--in_file input_file] 
+                                      [--chromosome how_chromosome_is_denoted_in_input_file] 
+                                      [--pval p_value] 
+                                      [--position how_chromosomal_position_is_denoted_in_input_file] 
+                                      [--col colored graph]  
+    
 
 Example:
 
