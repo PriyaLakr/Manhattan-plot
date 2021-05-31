@@ -3,6 +3,8 @@
 🐍 Python script for generating manhattan plot 🤓
 Written in python 3
 
+System requirements: No high performance computing required. Works well in a laptop with even 4GB RAM. 
+
 Input -> File containing SNPs information such as their chromosomal location, p-values, etc. Currently acceptable formats include .csv, .tsv, .txt 
 
 Output -> A manhattan plot in .png format with colored and black-white format 
