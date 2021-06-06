@@ -1,5 +1,8 @@
 # Manhattan-plot
 
+Author: Priya Lakra
+
+
 🐍 Python script for generating manhattan plot 🤓
 Written in python 3
 
