@@ -23,18 +23,18 @@ def data_processing(file,chromosome):
     #create a new column for chromosomes data where they are stored as integers 
     #replace "X" chromosome as an integer number 
     
-    file["new_chr"] = file[chromosome].replace('X','23')
+    file["new_chr"] = file[chromosome].replace(['X', 'Y'], ['23', '24'])
     file["new_chr"] = file["new_chr"].astype(int)
     
     return file
 
-def prepare_file(file,chromosome,pval,position):
+def prepare_file(file,pval,position,chromosome):
     
     # add an index column 
     file["index"] = [i for i in range(1,len(file[[chromosome]])+1)]
     
     # perform p value log transformation
-    file["-log10(p)"] = -np.log10(file[[pval]])
+    file["-log10(p)"] = np.where(file[[pval]] > 0, -np.log10(file[[pval]]), 0)
 
     file_new = file.sort_values(chromosome)
     
@@ -53,7 +53,7 @@ def prepare_file(file,chromosome,pval,position):
     return file_new
 
 
-def manhattanplot(snpinfile,chromosome,col):
+def manhattanplot(snpinfile,col,chromosome):
     
     
     fig=plt.figure(figsize=(15, 8))
@@ -116,7 +116,6 @@ if __name__ == "__main__":
         new_path = f'{path}/{filename}.result'
         os.makedirs(new_path)
         os.chdir(new_path)
-        #chromosome="new_chr"
         
         proc_snpinfile=prepare_file(proc_file,pval,position,chromosome="new_chr") 
         manhattanplot(proc_snpinfile,col,chromosome="new_chr") 
@@ -128,8 +127,8 @@ if __name__ == "__main__":
         os.makedirs(new_path)
         os.chdir(new_path)
 		
-        snpinfile=prepare_file(file,chromosome,pval,position) 
-        manhattanplot(snpinfile,chromosome,col) 
+        snpinfile=prepare_file(file,pval,position,chromosome) 
+        manhattanplot(snpinfile,col,chromosome) 
 
 
 
