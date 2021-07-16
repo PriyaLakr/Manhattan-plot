@@ -114,7 +114,10 @@ if __name__ == "__main__":
         proc_file=data_processing(file,chromosome)
         filename = infile.rsplit(".",1)[0]
         new_path = f'{path}/{filename}.result'
-        os.makedirs(new_path)
+        try:
+        	os.makedirs(new_path)
+        except OSError:
+        	print('dir exists')
         os.chdir(new_path)
         
         proc_snpinfile=prepare_file(proc_file,pval,position,chromosome="new_chr") 
@@ -124,7 +127,10 @@ if __name__ == "__main__":
     # making a result folder to store results
         filename = infile.rsplit(".",1)[0]
         new_path = f'{path}/{filename}.result'
-        os.makedirs(new_path)
+        try:
+        	os.makedirs(new_path)
+        except OSError:
+        	print('dir exists')
         os.chdir(new_path)
 		
         snpinfile=prepare_file(file,pval,position,chromosome) 
