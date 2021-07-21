@@ -1,0 +1,11 @@
+# testing trial ==== under development...dont touch this file ....
+language: python
+python:
+ - "3.6"
+#install:
+# - pip install -e .
+# - pip install pytest-cov codecov 
+#script:
+ # - pytest --cov=src tests # src is the application dir 
+#after_success:
+# - codecov
