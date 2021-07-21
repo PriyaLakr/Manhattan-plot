@@ -4,7 +4,9 @@ Author: Priya Lakra
 
 
 🐍 Python script for generating manhattan plot 🤓
-Written in python 3
+Written in python 3.8
+
+#unit test adding....
 
 System requirements: No high performance computing required. Works well in a laptop with even 4GB RAM. 
 
