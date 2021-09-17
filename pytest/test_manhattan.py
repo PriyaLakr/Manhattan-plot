@@ -73,6 +73,7 @@ def edit(file_new,position,chromosome):
 def test_edit():
     result_edit = edit(file=res_log, chromosome='chrom') 
   #  pd.testing.assert_frame_equal(res_Y, result_Y)
+    pass
     
     
     
